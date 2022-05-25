@@ -1,0 +1,124 @@
+OPP
+- Tập trung vào đối tượng để thao tác hơn là logic để thao tác chúng
+- Dễ quản lý, bảo trì và tái sử dụng
+- Có tính bảo mật cao
+- Đối tượng trong OPP: Thuộc tính(attribute) và phương thức(method), có trang thái và hành vi.
++ attribute: là những đặc điểm, đặc tính, thông tin của đối tượng
++ method: là những hành động mà đối tượng có thế thực hiện
+- class: là sự trừu tượng hóa cho 1 đối tượng, những đối tượng có những đặc tính tương tự nhau sẽ được tập hợp lại thành 1 class,
+và nó bao gồm 2 thông tin là attribute và method ( như 1 template mô tả trạng thái và hành vi mà loại đối tượng của lớp hỗ trợ)
+- 1 Đối tượng sẽ được xem là 1 thực thể của class
+---------------------------------------------
+4 đặc tính của OPP
+- Tính đóng gói(encapsulution)
+  Cho phép che giấu thông tin và những tính chất xử lý bên trong của đối tượng, các đối tượng khác không thể tác động trực
+tiếp đến dữ liệu bên trong và làm thay đổi trạng thái của đối tượng mà bắt buộc thông qua các phương thức công thức công khai
+do đối tượng đó cung cấp
+  Tính chất này giúp tăng tính bảo mật cho đối tượng và tránh tình trạng dữ liệu bị hư hóng ngoài ý muốn
+
+- Tính kế thừa(inheritance)
+  Tính chất được sử dụng khá nhiều, tính kế thừa cho phép sử dụng một lớp mới(lớp con), kế thừa và tái sử dụng các phương thức
+thuộc tính dựa trên lớp cũ(lớp cha) đã cho trước
+  Lớp con sẽ kế thừa toàn bộ những thành phần của lớp cha mà không cần phải định nghĩa lại. Ngoài ra lớp con còn có thể mở rộng
+thêm những thành phần mới
+
+- Tính đa hình(Polymorphism)
+  Tính đa hình trong lập trình OPP cho phép các đối tượng khác nhau thực thi chức năng giống nhau nhưng
+  theo nhiều cách khác nhau
+vd: Có 3 lớp XeDap, XeMay, XeOto đều có phương thước là speed và speed của mỗi đối tượng là khác nhau.
+
+- Tính trừu tượng(abstraction)
+  Tính trừu tượng giúp loại bỏ những thứ phức tạp, không cần thiết của đối tượng và chỉ tập trung vào
+  những gì cốt lỗi, quan trọng.
+
+  1 class khai báo abstract, được gọi là abstract class
+  1 method không có body được gọi là abstract method
+  1 class thông thường mà extend một class trừu tượng thì class đó phải thực hiện tất cả các phương thức trừu tượng của class trừu
+tượng mà nó extend
+  1 class đang sử dụng 1 phương thức abstract thì class đó phải là abstract
+- So sánh abstraction và encapsolution
+  Abstraction: ẩn đi những chi tiết không mong muốn và hiển thị hầu hết những thông tin cần thiết
+  Encapsolution: Đóng gói, mã hóa dự liệu(biến và phương thức) thành một sigle unit
+
+- So sánh abstract class và interface
+  Abstract class vừa có thể chứa abstract method hoặc không, còn interface chỉ chứa abstract method
+  Abstract class không hỗ trợ đa kế thừa còn interface thì có
+------------------------------------------------------
+Data structure basic
+ Trong python không cần khai báo kiểu dữ liệu trước khi sử dụng
+- Number: python hỗ trợ số nguyên(int), số thập phân(float), số phức(complex), số thập phân(Decimal), phân số(Fraction)
+	+ int: Không giới hạn độ dài
+	+ float: Bị giới hạn đến 16 số sau dấu thập phân
+    Các hàm thông dụng trong number
+	
+- String: Chuỗi được đặt trong dấu nháy đơn hoặc dấu nháy kép, các chuỗi có thể được lập chỉ mục
+	+ r: Thể hiện chuỗi thô, không biên dịch ký tự đặc biệt
+	+ """ """": Thể hiện chuỗi viết trên nhiều dòng
+	+ \: thoát ký tự đứng đằng sau
+	+ f: ASCII Formfeed
+	+ +: để nối chữ
+    Các hàm thông dụng trong string
+	+ isupper(), istile(), isdigit(), isspace()
+	+ enumerate(): trả về đối tượng là các cặp giá trị và index của các phần tử trong string
+	+ len(): trả về độ dài chữ
+	+ .strip(): Loại bỏ khoảng trắng ở đầu và đuôi chuỗi
+	+ .count(sub, <start, end>) // Đếm số sub có trong chuỗi
+	+ .lower(), upper()
+	+ .split(): Cắt chuỗi thành mảng
+	+ find():
+	+ .replace('entity', 'value'): Tìm và thay thế chuỗi
+- List: list được biểu diễn bằng dãy các giá trị, được phân tách nhau bằng dấu phẩy, nằm trong dấu []
+	Sử dụng index để truy xuất vào trong từng giá trị của list
+	List sử dụng được các toán tử +, *, in, 
+	Lưu ý không nên gán list trực tiếp vì nó sẽ trỏ tới chung 1 vùng nhớ nên khi thay đổi 1 trong 2 thì còn lại sẽ bị thay đổi lun.
+	lst1 = list(lst) // Cách gán list
+	Các Method: 
+		+ .count()
+		+ .index(),
+		+.copy(),
+		+ .clear(),
+		+ .append(x),
+		+ .extend(iterable) (python > 3.2)
+    		+ .insert(i, x), 
+		+ .pop([i]),
+		+ remove(x),
+		+ reverse(),
+		+ .sort(key=none, reverse=False)
+		+ list(): Chuyển đổi một đối tượng có thể lặp (tuple, string, set, dictionary) thành list.
+		+ max(): Trả về phần tử lớn nhất trong list.
+		+ min(): Trả về phần tử nhỏ nhất trong list.
+		+ sorted(): Trả về list mới đã được sắp xếp.
+		+ sum(): Trả về tổng của tất cả các phần tử trong list.
+- Tupple: Tuple trong Python là một chuỗi các phần tử có thứ tự giống như list.
+	Một tuple được định nghĩa bằng dấu ngoặc đơn (), các phần tử trong tuple cách nhau bằng dấu phẩy (,).
+	Sự khác biệt giữa list và tuple là chúng ta không thể thay đổi các phần tử trong tuple khi đã gán,
+		nhưng trong list thì các phần tử có thể thay đổi.
+	Vẫn có Comprehension bằng cách ép kiểu
+	Vẫn có các toán tử +, *, in
+	Nó chỉ hash object khi các phần tử của nó đều là hash object => Vẫn có thể thay đổi giá trị được
+	Các Method: .count(val), .index(sub[,start[,end]]), ..
+	Ưu điểm của Tuple: Tốc độ, dung lượng, có thể dùng làm key cho Dictonary
+- Set: Set trong Python là tập hợp các phần tử duy nhất, không có thứ tự.
+	Các phần tử trong set phân cách nhau bằng dấu phẩy và nằm trong dấu ngoặc nhọn {}
+	Các phần tử của set có thể thay đổi được
+	Các toán tử: in, - (trả về là một set mà các phần tử chỉ tồn tại trong set1 mà ko tồn tại trong set2)
+               & (trả về một set chứa các phần tử có cả trong set1 và set2)
+               | (trả về một set chứa tất cả các phần tử trong cả 2 set)
+               ^ (trả về một set chứa tất cả các phần tử chỉ tồn tại ở 1 trong 2 set)
+	Các Method: .clear(), .pop(), .remove(val), discard(val) (loại bỏ val ra khỏi set), .copy(), .add(), ...
+- Dict: - Tương tự như List, Tuple có chỉ mục index, nhưng dùng key để phân biệt.
+	Vẫn sử dụng được Conprehension (duyệt ma trận)
+- Boolean: Kiểu boolean trong python có 2 giá trị là True và False
+	- Mọi giá trị truyền vào boolean đều là True trừ 1 số trường hợp
+     		Số 0
+     		None
+     		Rỗng
+- File IO: 
+	open(file, mode='r') // Lưu file
+	.close() // Đóng file
+	.read(size=-1) // Đọc file(mặc định bỏ trống size thì sẽ đọc đến cuối file)
+	.doi_tuong_file.write(string);
+	file.closed	Trả về true nếu file đã được đóng, nếu không là false
+	file.mode	Trả về chế độ truy cập nào mà file đã mở với
+	file.name	Trả về tên file
+	file.softspace	Trả về false nếu space được yêu cầu tường minh với print, nếu không là true
