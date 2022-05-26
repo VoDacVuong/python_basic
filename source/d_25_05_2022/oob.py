@@ -89,3 +89,7 @@ porsche = Porsche()
 # passing the object
 kiemtra_dungxe(honda)
 kiemtra_dungxe(porsche)
+
+
+def func_demo(mes):
+    print(mes)

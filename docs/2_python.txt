@@ -1,0 +1,42 @@
+Comparison Operators
+- Các toán so sánh các giá trị ở hai bên của chúng và quyết định mối quan hệ giữa chúng. Chúng còn được gọi là toán tử quan hệ.
+==	Nếu giá trị của hai toán hạng bằng nhau thì điều kiện trở thành true.	(a == b) không đúng.
+! =	Nếu giá trị của hai toán hạng không bằng nhau thì điều kiện trở thành true.	(a! = b) là đúng.
+<>	Nếu giá trị của hai toán hạng không bằng nhau thì điều kiện trở thành true.	(a <> b) là đúng. Điều này tương tự với toán tử! =.
+>	Nếu giá trị của toán hạng bên trái lớn hơn giá trị của toán hạng bên phải, thì điều kiện trở thành true.	(a> b) là không đúng.
+<	Nếu giá trị của toán hạng bên trái nhỏ hơn giá trị của toán hạng bên phải, thì điều kiện trở thành true.	(a <b) là đúng.
+> =	Nếu giá trị của toán hạng bên trái lớn hơn hoặc bằng giá trị của toán hạng bên phải, thì điều kiện trở thành true.	(a> = b) không đúng.
+<=	Nếu giá trị của toán hạng bên trái nhỏ hơn hoặc bằng giá trị của toán hạng bên phải, thì điều kiện trở thành true.
+
+
+Statement
+ - Các hướng dẫn hoặc câu được viết trong code của python để thực thi được gọi là các câu lệnh.
+	vd: if, if...else, if...elif...else, ...  là những câu lệnh trong python
+
+
+Python Function (args, *kwargs, lambda, decorators)
+ - Function: Trong Python, function là một nhóm các câu lệnh (khối code) liên quan tới nhau, nhằm mục đích thực hiện một công việc nào đó.
+	    function giúp chia nhỏ chương trình thành các module nhỏ hơn. Chương trình càng lớn thì function càng nhiều.
+            function giúp sử dụng lại các đoạn code. Tránh lặp lại các đoạn code trùng nhau.
+	vd: def function_name ( arg1, arg2, ...): 
+ 		...... 
+		# function body 
+ 		......
+ - Lambda trong python là anonymous function, cú pháp chặt chẽ và ngắn gọn hơn so với hàm thông thường.
+	vd: add_one = lambda x: x + 1  <=>  def add_one(x):
+    						return x + 1
+ - *args, **kwargs: Chủ yếu được sử dụng trong định nghĩa. Hai cú pháp đặc biệt này giúp chúng ta có thể truyền bao nhiêu tham số vào 
+		 hàm cũng được.
+		 Trong trường hợp vừa muốn sử dụng tham số bình thường vừa muốn sử dụng *args, *kwargs, thì *args, *kwargs phải đặt sau cùng
+		 vd: def demo1(a, b, *args):... <=> demo1(1, 2, 3, 4, 5,...)
+		     def demo2(a = 1, b = 2, **kwargs):... <=> demo2(a = 1, b= 2, c = 3, d = 4, e = ,...)
+		   Cách sử dụng **kwargs cũng tương tự như như *args, tuy nhiên, nó không dùng cho các tham số thông thường truyền vào
+		   lần lượt, mà nó được sử dụng cho các tham số đặt tên (thuật ngữ chính xác là named arguments hoặc keyword arguments).
+
+ - decorators: Decorator là một hàm nhận tham số đầu vào là một hàm khác và mở rộng tính năng cho hàm đó mà không thay đổi nội dung của nó.
+	       Decorator có thể tự tạo hoặc sử dụng những decorator có sẵn của python
+
+Modules and packages in Python
+ - Module: Trong python bất kỳ file scripst nào có đuôi là .py đều được gọi là 1 module
+
+Logger, Errors and Exception Handling
