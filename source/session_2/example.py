@@ -1,7 +1,4 @@
 #Function
-import imp
-
-
 def DTB(toan: float, ly: float, hoa: float):
     return (toan + ly + hoa)/ 3
 # print(DTB(3.1, 5.6, 9.1))
@@ -85,8 +82,60 @@ def print_mess(message):
 
 #--------------------
 #Module and packages in python
-from d_25_05_2022.oob import func_demo
+from distutils.log import Log
+import message
+# from . import message as ms
 
+# print(message.CONTACT_ADMIN_FOR_SUPPORT)
+# print(ms.CONTACT_ADMIN_FOR_SUPPORT)
 
-func_demo("Day la function")
+# importing module
 
+#Logger, Errors and Exception Handling
+import logging
+# Create and configure logger
+logging.basicConfig(filename="newfile.log",
+                    format='%(asctime)s %(message)s',
+                    filemode='w')
+ 
+# Creating an object
+logger = logging.getLogger()
+ 
+# Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
+ 
+# Test messages
+logger.debug("Harmless debug Message")
+logger.info("Just an information")
+logger.warning("Its a Warning")
+logger.error("Did you try to divide by zero")
+logger.critical("Internet is down")
+
+# Exception Handling
+# import module sys to get the type of exception
+import sys
+
+randomList = ['a', 0, 2]
+
+# for entry in randomList:
+#     try:
+#         print("The entry is", entry)
+#         r = 1/int(entry)
+#         break
+#     except:
+#         print("Oops!", sys.exc_info()[0], "occurred.")
+#         print("Next entry.")
+#         print()
+# print("The reciprocal of", entry, "is", r)
+
+#vd:2
+for entry in randomList:
+    try:
+        print("The entry is", entry)
+        r = 1/int(entry)
+        break
+    except Exception as e:
+        print("Oops!", e.__class__, "occurred.")
+        print("Next entry.")
+        print()
+print("The reciprocal of", entry, "is", r)

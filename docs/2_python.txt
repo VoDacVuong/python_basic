@@ -38,5 +38,20 @@ Python Function (args, *kwargs, lambda, decorators)
 
 Modules and packages in Python
  - Module: Trong python bất kỳ file scripst nào có đuôi là .py đều được gọi là 1 module
+	vd from rest_framework import permissions
+	   from rest_framework import *
+	   from rest_framework import permissions as p
+	   from backgroud_task.models import Task
+	   ...
+- Packages: Package trong Python bao gồm một hoặc nhiều module. Package giống như một thư mục (directory). Một package có thể chứa các package khác.
+	    Những module có chung đặc điểm thường được đặt chung vào một packages.
+	    vd: import Robot.Design.outfit  // import module outfit thông qua packages Robot và sub_packages Design
 
 Logger, Errors and Exception Handling
+ - Logger: Được dùng vào những mục tiêu Debug,
+
+
+
+
+
+
