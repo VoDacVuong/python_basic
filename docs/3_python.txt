@@ -1,0 +1,26 @@
+Unit Test, Send email
+ - Unit Test: Unit là một khái niệm trong hệ thống phần mềm và mỗi unit được định nghĩa là các thành phần độc lập với nhau 
+		theo "định cỡ": Function -> Class -> Module -> Package (với Python).
+	      Unit-test là một thuật ngữ trong kiểm thử phần mềm, được định nghĩa là kiểm thử mức đơn vị. Có nghĩa là đặt các 
+		bài test vào các thành phần "đơn vị" (unit) của hệ thống phần mềm.
+ - Send email: Để thực hiện các công việc có liên quan đến gửi gmail thông dụng.
+	Demo sử dụng giao thức SMTP để gửi mail (import smtplib)
+	SMTP (Simple Mail Transfer Protocol) là một giao thức ở lớp ứng dụng (trên TCP) được sử dụng để giao tiếp với mail servers từ các dịch vụ bên ngoài, như ứng dụng mail client trên điện thoại của bạn chẳng hạn. SMTP chỉ là một giao thức vận chuyển, như vậy bạn sẽ không thể nhận được email từ nó – nghĩa là bạn chỉ có thể gửi mail thông qua SMTP được thôi và cũng là câu chuyện mà mình sẽ tập trung trong bài viết này. Nếu bạn muốn nhận hay truy xuất thông tin email thì bạn sẽ cần phải đụng đến giao thức
+	  IMAP (Internet Message Access Protocol).
+
+Working with file: Image, PDF, CSV, Excel
+ - Excel: Python có hỗ trợ rất nhiều thư viện để import và export file excel như:
+	openpyxl    Thư viện được đề xuất cho việc đọc ghi file Excel 2010 (xlsx)
+	xlsxwrite   Thư viện để ghi dữ liệu, format, tạo bảng biểu cho Excel 2010 (xlsx)
+	xlrd        Thư viện đọc, ghi file excel với dịnh dạng cũ (xls)
+	xlwt        Thư viện đọc, ghi file excel với dịnh dạng cũ (xls)
+	xlutils     Thư viện tổng hợp cả xlrd, openpyxl và xlwt, để xử lý copy và chỉnh sửa các file excel
+	pandas      Pandas là một thư viện mã nguồn mở, được cấp phép BSD cung cấp các cấu trúc dữ liệu và các công cụ phân tích dữ liệu hiệu suất cao, dễ sử dụng cho ngôn ngữ lập trình Python. Nó hỗ trợ đọc các định dạng file: CSV, MS Excel, HTML, SQL,…
+ - CSV: Được sử dụng rất nhiều, tệp CSV là một loại tệp văn bản thuần túy sử dụng cấu trúc cụ thể để sắp xếp dữ liệu dạng bảng.
+	CSV là một định dạng phổ biến để trao đổi dữ liệu vì sự nhỏ gọn, đơn giản và tính khái quát.
+	Các tệp của CSV sẽ mở bằng Excel và gần như tất cả các cơ sở dữ liệu đều có công cụ cho phép nhập từ tệp CSV.
+	Định dạng chuẩn được xác định bởi dữ liệu hàng và cột.
+	
+	Các thư viện hỗ trợ xử lý csv trong python:: csv, pandas,...
+ - Image: Xử lý hình ảnh bằng Pillow và OpenCV, những tính năng nổi bật: Mở image, chuyển đồi màu, thay đổi độ tương phản, thay đổi độ sáng
+		làm mờ, ...
