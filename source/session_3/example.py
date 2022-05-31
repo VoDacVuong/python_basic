@@ -1,5 +1,6 @@
 
 #-------------------------------------------------
+import pdb
 import smtplib
 import os
 import json
@@ -97,4 +98,18 @@ def canny_edge_detection(file_img):
       edges = cv2.Canny(img, 100, 200)
       cv2.imshow('image', edges)
       cv2.waitKey(0)
+
       cv2.destroyAllWindows()
+
+# convert to pdf
+import validators
+import pdfkit
+def html2pdf(html_file_name_or_url_html, pdf_file_name):
+      config = pdfkit.configuration(wkhtmltopdf="C:\\Program Files\\wkhtmltopdf\\bin\wkhtmltopdf.exe")
+      # import pdb;pdb.set_trace()
+      if validators.url(html_file_name_or_url_html):
+            pdfkit.from_url(html_file_name_or_url_html, pdf_file_name, configuration = config)
+      else:
+            pdfkit.from_file(html_file_name_or_url_html, pdf_file_name, configuration = config)
+
+

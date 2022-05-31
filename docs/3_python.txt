@@ -24,3 +24,8 @@ Working with file: Image, PDF, CSV, Excel
 	Các thư viện hỗ trợ xử lý csv trong python:: csv, pandas,...
  - Image: Xử lý hình ảnh bằng Pillow và OpenCV, những tính năng nổi bật: Mở image, chuyển đồi màu, thay đổi độ tương phản, thay đổi độ sáng
 		làm mờ, ...
+
+ - Tạo file pdf từ file có sẵn hoặc từ html template:
+	- pip install pdfkit, validators
+        - config pdfkit lại đường dẫn đến pdfkit
+	Để thực hiện cần có file .html mẫu hoặc 1 template html vd 'https://google.com/'
